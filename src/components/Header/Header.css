@@ -1,0 +1,109 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  background-image: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(121, 9, 118, 1) 0%,
+    rgba(118, 14, 121, 1) 34%,
+    rgba(0, 212, 255, 1) 87%
+  );
+  color: #fff;
+  padding: 10px 20px;
+}
+.header h2 {
+  font-size: 2rem;
+}
+.items {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.item {
+  list-style: none;
+  position: relative;
+}
+.item a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+}
+.item::after {
+  content: "";
+  height: 2px;
+  width: 0;
+  position: absolute;
+  right: 50%;
+  bottom: 0;
+  background: #fff;
+  transition: 1s ease;
+  border-radius: 50px;
+}
+.item:hover::after {
+  width: 100%;
+  right: 0;
+}
+@media (max-width: 678px) {
+  .header {
+    display: block;
+  }
+  .items {
+    flex-direction: column;
+    position: absolute;
+    background-color: #770c77;
+    width: 100%;
+    height: 100%;
+    top: 68px;
+    margin: 0;
+    left: -100%;
+    align-items: flex-start;
+    padding: 20px;
+    transition: 1s ease-in-out;
+  }
+  .open .items {
+    left: 0;
+  }
+  .item {
+    display: block;
+    width: 100%;
+  }
+  .menu-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .menu-button {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+  }
+  .menu-button span {
+    width: 80%;
+    height: 3px;
+    background-color: #770c77;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    transition: 0.5s ease;
+  }
+  .menu-button span.bar-1 {
+    transform: translate(-50%, -12px);
+  }
+  .menu-button span.bar-3 {
+    transform: translate(-50%, 10px);
+  }
+  .open-menu span.bar-1 {
+    transform: translate(-50%, -50%) rotate(-40deg);
+  }
+  .open-menu span.bar-3 {
+    transform: translate(-50%, -50%) rotate(40deg);
+  }
+  .open-menu span.bar-2 {
+    width: 0;
+  }
+}
