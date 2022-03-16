@@ -29,6 +29,10 @@
   text-decoration: none;
   font-size: 20px;
   color: #fff;
+  transition: 1s ease;
+}
+.item a:hover {
+  color: #770c77;
 }
 .item::after {
   content: "";
@@ -37,7 +41,7 @@
   position: absolute;
   right: 50%;
   bottom: 0;
-  background: #fff;
+  background: #770c77;
   transition: 1s ease;
   border-radius: 50px;
 }
