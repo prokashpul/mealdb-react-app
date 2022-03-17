@@ -2,13 +2,16 @@ import React from "react";
 import "./Meal.css";
 
 const Meal = (props) => {
-  const { strMeal, strMealThumb, strInstructions, strAre } = props.Mealitem;
+  const { strMeal, strMealThumb, strInstructions, strCategory } =
+    props.Mealitem;
   return (
     <div className="meal">
       <img src={strMealThumb} alt="" />
       <div className="meal-body">
-        <h3>{strMeal ? strMeal : "Food"}</h3>
-        <h4>{strAre ? strAre : "no"}</h4>
+        <h2>{strMeal ? strMeal : "Food"}</h2>
+        <h4>
+          <span>Category:</span> {strCategory ? strCategory : "no"}
+        </h4>
         <p>{strInstructions.slice(0, 50)}</p>
       </div>
     </div>
