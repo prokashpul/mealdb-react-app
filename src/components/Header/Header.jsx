@@ -1,5 +1,4 @@
 import React from "react";
-import Search from "../Search/Search";
 import "./Header.css";
 
 const Header = () => {
@@ -33,7 +32,6 @@ const Header = () => {
             </ul>
           </nav>
         </div>
-        <Search></Search>
       </header>
     </div>
   );
