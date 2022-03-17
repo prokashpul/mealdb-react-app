@@ -1,13 +1,14 @@
 import "./App.css";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
+import Mealitems from "./components/Mealposts/Mealitems";
 
 function App() {
   return (
     <div className="App">
       <Header></Header>
       <main className="main">
-        <h2>Hello</h2>
+        <Mealitems></Mealitems>
       </main>
       <Footer></Footer>
     </div>
