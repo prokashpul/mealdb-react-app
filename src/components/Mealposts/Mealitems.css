@@ -33,7 +33,12 @@
   font-size: 20px;
   cursor: pointer;
 }
-
+.countMeal {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  color: rgb(120, 10, 119);
+}
 @media (max-width: 920px) {
   .mealitems {
     grid-template-columns: repeat(2, 1fr);
