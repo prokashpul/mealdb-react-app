@@ -27,3 +27,11 @@
   font-size: 20px;
   cursor: pointer;
 }
+@media (max-width: 678px) {
+  .search-area input {
+    width: 90%;
+  }
+  .search-area button {
+    font-size: 15px;
+  }
+}
