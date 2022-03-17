@@ -4,3 +4,8 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+.main {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 20px;
+}
