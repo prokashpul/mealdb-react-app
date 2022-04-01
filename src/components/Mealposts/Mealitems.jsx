@@ -46,7 +46,7 @@ const Mealitems = () => {
         </button>
       </div>
       <h3 className="countMeal">Meal Result: {meals.length}</h3>
-      <div className="mealitems">
+      <div className="mealitems main">
         {meals?.map((meal) => (
           <Meal
             handelFood={handelFood}
