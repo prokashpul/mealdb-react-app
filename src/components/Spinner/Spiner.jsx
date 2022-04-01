@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { ClipLoader } from "react-spinners";
 import "./Spinner.css";
 const Spiner = ({ loading }) => {
