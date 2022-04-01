@@ -15,7 +15,7 @@ const Header = () => {
           <div className="menu-logo">
             <h2>MyFood</h2>
             <div
-              className={!open ? "open-menu menu-button" : "menu-button"}
+              className={open ? "open-menu menu-button" : "menu-button"}
               onClick={() => setOpen(!open)}
             >
               <span className="bar-1"></span>
@@ -23,10 +23,13 @@ const Header = () => {
               <span className="bar-3"></span>
             </div>
           </div>
-          <nav className={!open ? "open menu" : "menu"}>
+          <nav
+            onClick={() => setOpen(!open)}
+            className={open ? "open menu" : "menu"}
+          >
             <ul className="items">
               <li className="item">
-                <CustomNavLink to="/home">Home</CustomNavLink>
+                <CustomNavLink to="/">Home</CustomNavLink>
               </li>
               <li className="item">
                 <CustomNavLink to="/about">About</CustomNavLink>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Meal from "../Meal/Meal";
 import "./Mealitems.css";
 
@@ -11,16 +12,8 @@ const Mealitems = () => {
       .then((res) => res.json())
       .then((data) => setState(data.meals));
   }, [searchText]);
-  console.log(meals);
   // search button
   const clickNow = () => {
-    const inputText = document.getElementById("search-input");
-    if (inputText.value) {
-      setSearchText(inputText.value);
-    }
-    inputText.value = "";
-  };
-  const liveLoad = () => {
     const inputText = document.getElementById("search-input");
     if (inputText.value) {
       setSearchText(inputText.value);
@@ -33,7 +26,11 @@ const Mealitems = () => {
       setSearchText(event.target.value);
     }
   };
-
+  let Navigate = useNavigate();
+  const handelFood = (foodId) => {
+    const path = `food/${foodId}`;
+    Navigate(path);
+  };
   return (
     <div>
       <div className="search-area">
@@ -43,7 +40,6 @@ const Mealitems = () => {
           id="search-input"
           placeholder="Search"
           onKeyPress={enterPress}
-          onLoad={liveLoad}
         />
         <button className="search-btn" onClick={clickNow}>
           Search
@@ -52,7 +48,11 @@ const Mealitems = () => {
       <h3 className="countMeal">Meal Result: {meals.length}</h3>
       <div className="mealitems">
         {meals?.map((meal) => (
-          <Meal Mealitem={meal} key={meal.idMeal}></Meal>
+          <Meal
+            handelFood={handelFood}
+            Mealitem={meal}
+            key={meal.idMeal}
+          ></Meal>
         ))}
       </div>
     </div>

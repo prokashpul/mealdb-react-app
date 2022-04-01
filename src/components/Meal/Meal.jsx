@@ -2,10 +2,10 @@ import React from "react";
 import "./Meal.css";
 
 const Meal = (props) => {
-  const { strMeal, strMealThumb, strInstructions, strCategory } =
+  const { idMeal, strMeal, strMealThumb, strInstructions, strCategory } =
     props.Mealitem;
   return (
-    <div className="meal">
+    <div onClick={() => props.handelFood(idMeal)} className="meal">
       <img src={strMealThumb} alt="" />
       <div className="meal-body">
         <h2>{strMeal ? strMeal : "Food"}</h2>

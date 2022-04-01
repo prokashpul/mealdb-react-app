@@ -1,0 +1,23 @@
+.food-info {
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.519);
+}
+.food-info h2 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.food-info .body {
+  padding: 25px;
+}
+.food-info .body p {
+  margin: 20px 0;
+}
+.food-info img {
+  width: 100%;
+  object-fit: fill;
+  height: 550px;
+}
+@media (max-width: 677px) {
+  .food-info img {
+    height: 320px;
+  }
+}
