@@ -1,33 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
+import CustomNavLink from "../CustmNavLink/CustomNavLink";
 import "./Header.css";
 
 const Header = () => {
-  const toggle = () => {
-    document.querySelector(".menu-button").classList.toggle("open-menu");
-    document.querySelector(".menu").classList.toggle("open");
-  };
+  const [open, setOpen] = useState(false);
+  // const toggle = () => {
+  //   document.querySelector(".menu-button").classList.toggle("open-menu");
+  //   document.querySelector(".menu").classList.toggle("open");
+  // };
   return (
     <div>
       <header className="header">
         <div className="main-header">
           <div className="menu-logo">
             <h2>MyFood</h2>
-            <div className="menu-button" onClick={toggle}>
+            <div
+              className={!open ? "open-menu menu-button" : "menu-button"}
+              onClick={() => setOpen(!open)}
+            >
               <span className="bar-1"></span>
               <span className="bar-2"></span>
               <span className="bar-3"></span>
             </div>
           </div>
-          <nav className="menu">
+          <nav className={!open ? "open menu" : "menu"}>
             <ul className="items">
               <li className="item">
-                <a href="/home">Home</a>
+                <CustomNavLink to="/home">Home</CustomNavLink>
               </li>
               <li className="item">
-                <a href="/home">About</a>
+                <CustomNavLink to="/about">About</CustomNavLink>
               </li>
               <li className="item">
-                <a href="/home">Shop</a>
+                <CustomNavLink to="/cart">Cart</CustomNavLink>
+              </li>
+              <li className="item">
+                <CustomNavLink to="/contact">Contact Us</CustomNavLink>
               </li>
             </ul>
           </nav>

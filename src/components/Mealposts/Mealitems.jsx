@@ -20,6 +20,13 @@ const Mealitems = () => {
     }
     inputText.value = "";
   };
+  const liveLoad = () => {
+    const inputText = document.getElementById("search-input");
+    if (inputText.value) {
+      setSearchText(inputText.value);
+    }
+    inputText.value = "";
+  };
 
   const enterPress = (event) => {
     if (event.key === "Enter") {
@@ -36,6 +43,7 @@ const Mealitems = () => {
           id="search-input"
           placeholder="Search"
           onKeyPress={enterPress}
+          onLoad={liveLoad}
         />
         <button className="search-btn" onClick={clickNow}>
           Search

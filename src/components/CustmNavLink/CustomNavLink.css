@@ -1,0 +1,15 @@
+a.activeNav {
+  color: #770c77;
+  position: relative;
+}
+a.activeNav::after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: #770c77;
+  transition: 1s ease;
+  border-radius: 50px;
+}
