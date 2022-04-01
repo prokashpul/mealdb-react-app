@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "./FoodInfo.css";
 const FoodInfo = () => {
   const { food } = useParams();
@@ -26,6 +26,9 @@ const FoodInfo = () => {
         <h4>Category: {singleFood?.strCategory}</h4>
         <h4> Tags: {singleFood?.strTags}</h4>
         <p> {singleFood?.strInstructions}</p>
+        <Link to="/" className="">
+          &lt;&lt; Back Home
+        </Link>
       </div>
     </div>
   );

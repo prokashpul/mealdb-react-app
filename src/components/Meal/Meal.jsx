@@ -14,6 +14,7 @@ const Meal = (props) => {
         </h4>
         <p>{strInstructions.slice(0, 50)}</p>
       </div>
+      <button className="btn">Read more</button>
     </div>
   );
 };

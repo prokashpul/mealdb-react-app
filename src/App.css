@@ -9,3 +9,18 @@ body {
   margin: 50px auto;
   padding: 20px;
 }
+.btn {
+  margin: 20px;
+  padding: 5px 10px;
+  background-color: #780a77;
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 100px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #fff;
+  color: #780a77;
+  border-color: #780a77;
+}
