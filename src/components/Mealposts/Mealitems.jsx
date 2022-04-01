@@ -45,7 +45,9 @@ const Mealitems = () => {
           Search
         </button>
       </div>
-      <h3 className="countMeal">Meal Result: {meals.length}</h3>
+      <h3 className="countMeal">
+        Meal Result: {meals ? meals.length : "Wrong Input Please try again"}
+      </h3>
       <div className="mealitems main">
         {meals?.map((meal) => (
           <Meal

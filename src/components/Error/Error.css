@@ -1,0 +1,10 @@
+.error {
+  display: flex;
+  height: 86vh;
+  justify-content: center;
+  align-items: center;
+}
+.error h2 {
+  font-size: 5rem;
+  color: rgba(121, 9, 118, 1);
+}
